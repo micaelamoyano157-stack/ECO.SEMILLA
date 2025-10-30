@@ -1,1 +1,320 @@
-# ECO.SEMILLA
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSemillas - Papel Sembrable</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      background-color: #f9fff9;
+      color: #333;
+    }
+
+    header {
+      background-color: #3b7a57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2d5e44;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #469b6e;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #2d5e44;
+      margin-bottom: 15px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .producto {
+      background-color: white;
+      border: 1px solid #d9d9d9;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .boton {
+      background-color: #3b7a57;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .boton:hover {
+      background-color: #2d5e44;
+    }
+
+    .detalles {
+      display: none;
+      text-align: left;
+      margin-top: 10px;
+      background-color: #f0fff0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    #carrito {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      background: white;
+      border: 2px solid #3b7a57;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    #carrito h3 {
+      text-align: center;
+      color: #2d5e44;
+    }
+
+    footer {
+      background-color: #2d5e44;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #e8f5e9;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f5fff5;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        padding: 10px;
+      }
+      #carrito {
+        width: 90%;
+        right: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EcoSemillas 🌱</h1>
+    <p>Papel sembrable 100% reciclado y biodegradable</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#costos">Costos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>♻️Bienvenido a EcoSemillas♻️</h2>
+    <p>Transformamos el papel en vida 🌿. Cada hoja contiene semillas listas para germinar y cuidar el planeta.</p>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p><b>EcoSemillas</b> nació como una propuesta sustentable para reducir residuos y promover la conciencia ambiental. Elaboramos papel sembrable artesanalmente, con amor por la naturaleza y compromiso con el futuro.</p>
+    <p><b>Misión:</b> Fomentar hábitos de consumo responsable mediante productos ecológicos y creativos.</p>
+    <p><b>Visión:</b> Convertirnos en referentes en soluciones ecológicas y modelos de emprendimiento verde.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="e:\prueba de proceso\tarjeta.jpg" alt="Tarjetas sembrables">
+        <h3>Tarjetas Sembrables</h3>
+        <p>$1.200</p>
+        <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
+        <div class="detalles">
+          <p>Tarjetas ecológicas personalizadas con semillas de flores o hierbas. Perfectas para eventos y regalos.</p>
+        </div>
+        <button class="boton" onclick="agregarCarrito('Tarjetas Sembrables', 1200)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="e:\prueba de proceso\etiqueta.jpg" alt="Etiquetas">
+        <h3>Etiquetas Sembrables</h3>
+        <p>$1.000</p>
+        <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
+        <div class="detalles">
+          <p>Etiquetas hechas con papel reciclado y semillas de rúcula o menta. Una forma original de cuidar el planeta.</p>
+        </div>
+        <button class="boton" onclick="agregarCarrito('Etiquetas Sembrables', 1000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <img src="e:\prueba de proceso\cuaderno.jpg" alt="Cuadernos">
+        <h3>Cuadernos Ecológicos</h3>
+        <p>$3.500</p>
+        <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
+        <div class="detalles">
+          <p>Cuadernos con tapas de papel sembrable, hechos a mano. Cada uno puede dar vida a una planta.</p>
+        </div>
+        <button class="boton" onclick="agregarCarrito('Cuadernos Ecológicos', 3500)">Agregar al carrito</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="proceso">
+    <h2>Proceso Productivo</h2>
+    <p>Recolectamos papel usado, lo trituramos, mezclamos con semillas y moldeamos artesanalmente. Cada hoja seca al sol, conservando el poder de germinar. 🌸</p>
+  </section>
+
+  <section id="costos">
+    <h2>💰 Análisis de Costos y Rentabilidad</h2>
+    <h3>1. Precio de costo (unidad)</h3>
+    <table>
+      <tr><th>Concepto</th><th>Costo por unidad</th></tr>
+      <tr><td>Materias primas (papel, semillas, agua, tintas)</td><td>$58</td></tr>
+      <tr><td>Empaque ecológico</td><td>$15</td></tr>
+      <tr><td>Mano de obra artesanal</td><td>$60</td></tr>
+      <tr><td>Otros costos (energía, transporte, pérdidas)</td><td>$17</td></tr>
+      <tr style="font-weight:bold; background-color:#d0f0d0;"><td>Total</td><td>$150 aprox.</td></tr>
+    </table>
+
+    <h3>2. Precio de venta sugerido</h3>
+    <table>
+      <tr><th>Tipo de venta</th><th>Precio unitario</th><th>Ganancia unitaria</th><th>Margen</th></tr>
+      <tr><td>Ferias / Mayorista</td><td>$700</td><td>$550</td><td>78%</td></tr>
+      <tr><td>Minorista (redes, encargos)</td><td>$900</td><td>$750</td><td>83%</td></tr>
+      <tr><td>Personalizado / corporativo</td><td>$1.200</td><td>$1.050</td><td>87%</td></tr>
+    </table>
+    <p><b>📈 Precio promedio:</b> $900 &nbsp;|&nbsp; <b>📉 Mínimo:</b> $700 &nbsp;|&nbsp; <b>📈 Máximo:</b> $1.200</p>
+
+    <h3>3. Estimación mensual (100 unidades vendidas)</h3>
+    <table>
+      <tr><th>Tipo de venta</th><th>Ingreso total</th><th>Costo total</th><th>Ganancia neta</th></tr>
+      <tr><td>100 unidades a $900</td><td>$90.000</td><td>$15.000</td><td>$75.000</td></tr>
+    </table>
+    <p>💡 Con producción artesanal, la rentabilidad mensual ronda el <b>80%</b>, gracias al bajo costo de materia prima (papel reciclado y semillas).</p>
+
+    <h3>4. Relación oferta y demanda</h3>
+    <ul style="text-align:left; max-width:700px; margin:0 auto;">
+      <li>📈 Demanda creciente en eventos sostenibles, regalos corporativos y ferias ecológicas.</li>
+      <li>⚙️ Oferta limitada por el proceso artesanal → precios más altos y percepción de exclusividad.</li>
+      <li>🌼 En temporada alta (diciembre, primavera), se puede aumentar el precio un 10–15% sin perder ventas.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 S.M TUCUMAN, Argentina</p>
+    <p>📧 ecosiemillas@gmail.com</p>
+    <p>📱 Instagram: <b>@eco_.semillas</b></p>
+    <p>☎️Número de teléfono 54+ 381 511 1428</p>
+  </section>
+
+  <div id="carrito">
+    <h3>🛒 Carrito</h3>
+    <ul id="listaCarrito"></ul>
+    <p><b>Total:</b> $<span id="total">0</span></p>
+    <button class="boton" onclick="finalizarCompra()">Finalizar compra</button>
+  </div>
+
+  <footer>
+    <p>© 2025 EcoSemillas - Papel que florece 🌱</p>
+  </footer>
+
+  <script>
+    function toggleDetalles(boton) {
+      const detalles = boton.nextElementSibling;
+      detalles.style.display = detalles.style.display === "block" ? "none" : "block";
+    }
+
+    let carrito = [];
+    let total = 0;
+
+    function agregarCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      total += precio;
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("listaCarrito");
+      lista.innerHTML = "";
+      carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - $${item.precio}`;
+        lista.appendChild(li);
+      });
+      document.getElementById("total").textContent = total;
+    }
+
+    function finalizarCompra() {
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío 🌱");
+      } else {
+        alert("Gracias por tu compra ecológica 💚");
+        carrito = [];
+        total = 0;
+        actualizarCarrito();
+      }
+    }
+  </script>
+</body>
+</html>
+
