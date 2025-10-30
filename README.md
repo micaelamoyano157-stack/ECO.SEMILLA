@@ -284,7 +284,7 @@
     <h2>Nuestros Productos</h2>
     <div class="productos">
       <div class="producto">
-        <img src="imagenes/tarjeta.jpg" alt="Tarjetas sembrables con semillas">
+        <img src="https://pypaprint.com/files/subscribers/ea32e0c7-d695-4cbd-a1ed-b568857a315a/sites/b80c0000-568f-0050-8e4b-08db7dfaf500/products/880c0000-568f-0050-a12d-08db812bad45/Tarjetas_ECOLOGICA_xlarge.png?stamp=638306294511718061" alt="Tarjetas sembrables con semillas">
         <h3>Tarjetas Sembrables</h3>
         <p>$1.200</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -295,7 +295,7 @@
       </div>
 
       <div class="producto">
-        <img src="imagenes/etiqueta.jpg" alt="Etiquetas sembrables">
+        <img src="https://eco-regalos.com/movil/wp-content/uploads/2021/04/etiquetas_germinables_eco_semillas-ropa-01-scaled.jpg">
         <h3>Etiquetas Sembrables</h3>
         <p>$1.000</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -306,7 +306,7 @@
       </div>
 
       <div class="producto">
-        <img src="imagenes/cuaderno.jpg" alt="Cuadernos ecológicos">
+        <img src="https://merchperu.net/wp-content/uploads/2022/09/LIBRETA-ECOLOGICA-RKN-820-2.jpg" alt="Cuadernos ecológicos">
         <h3>Cuadernos Ecológicos</h3>
         <p>$3.500</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -386,3 +386,5 @@
   </script>
 </body>
 </html>
+
+
