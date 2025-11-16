@@ -12,31 +12,30 @@
       box-sizing: border-box;
     }
 
-    body {
+   body {
       font-family: "Arial", sans-serif;
       line-height: 1.6;
       background-color: #f9fff9;
       color: #333;
     }
 
-    /* --- ENCABEZADO --- */
+  /* --- ENCABEZADO --- */
     header {
       background-color: #3b7a57;
       color: white;
       padding: 30px 15px;
       text-align: center;
     }
-
     header h1 {
       font-size: 2rem;
     }
 
-    header p {
+   header p {
       font-size: 1rem;
       margin-top: 5px;
     }
 
-    /* --- NAVEGACIÓN --- */
+ /* --- NAVEGACIÓN --- */
     nav {
       background-color: #2d5e44;
       display: flex;
@@ -45,7 +44,7 @@
       flex-wrap: wrap;
     }
 
-    nav a {
+  nav a {
       color: white;
       padding: 15px 20px;
       text-decoration: none;
@@ -53,28 +52,28 @@
       transition: background 0.3s;
     }
 
-    nav a:hover {
-      background-color: #469b6e;
+  nav a:hover {
+    background-color: #469b6e;
     }
 
-    /* --- SECCIONES --- */
+  /* --- SECCIONES --- */
     section {
       padding: 50px 25px;
       text-align: center;
     }
 
-    h1, h2 {
+   h1, h2 {
       color: #2d5e44;
       margin-bottom: 15px;
     }
 
-    p {
+  p {
       max-width: 800px;
       margin: 0 auto;
       font-size: 1rem;
     }
 
-    /* --- PRODUCTOS --- */
+   /* --- PRODUCTOS --- */
     .productos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,8 +81,8 @@
       margin-top: 20px;
     }
 
-    .producto {
-      background-color: white;
+   .producto {
+     background-color: white;
       border: 1px solid #d9d9d9;
       border-radius: 12px;
       padding: 20px;
@@ -91,25 +90,25 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .producto:hover {
+  .producto:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
-    .producto img {
+  .producto img {
       width: 100%;
       height: auto;
       border-radius: 12px;
       object-fit: cover;
     }
 
-    .producto h3 {
+  .producto h3 {
       margin-top: 10px;
       font-size: 1.2rem;
       color: #2d5e44;
     }
 
-    .boton {
+   .boton {
       background-color: #3b7a57;
       color: white;
       border: none;
@@ -120,11 +119,11 @@
       transition: background 0.3s;
     }
 
-    .boton:hover {
+  .boton:hover {
       background-color: #2d5e44;
     }
 
-    .detalles {
+   .detalles {
       display: none;
       text-align: left;
       margin-top: 10px;
@@ -133,7 +132,7 @@
       border-radius: 8px;
     }
 
-    /* --- CARRITO --- */
+   /* --- CARRITO --- */
     #carrito {
       position: fixed;
       right: 15px;
@@ -147,20 +146,20 @@
       z-index: 1000;
     }
 
-    #carrito h3 {
+  #carrito h3 {
       text-align: center;
       color: #2d5e44;
       margin-bottom: 10px;
     }
 
-    #listaCarrito {
-      max-height: 120px;
+  #listaCarrito {
+    max-height: 120px;
       overflow-y: auto;
       list-style: none;
       margin-bottom: 10px;
     }
 
-    /* --- TABLAS --- */
+   /* --- TABLAS --- */
     table {
       border-collapse: collapse;
       margin: 20px auto;
@@ -169,20 +168,20 @@
       font-size: 0.95rem;
     }
 
-    th, td {
-      border: 1px solid #ccc;
+  th, td {
+    border: 1px solid #ccc;
       padding: 8px;
     }
 
-    th {
+  th {
       background-color: #e8f5e9;
     }
 
-    tr:nth-child(even) {
+  tr:nth-child(even) {
       background-color: #f5fff5;
     }
 
-    /* --- PIE DE PÁGINA --- */
+   /* --- PIE DE PÁGINA --- */
     footer {
       background-color: #2d5e44;
       color: white;
@@ -192,63 +191,62 @@
       font-size: 0.9rem;
     }
 
-    /* --- RESPONSIVIDAD --- */
+   /* --- RESPONSIVIDAD --- */
     @media (max-width: 900px) {
       nav a {
         padding: 10px;
         font-size: 0.9rem;
       }
 
-      header h1 {
+header h1 {
         font-size: 1.7rem;
       }
-
-      section {
+    section {
         padding: 30px 15px;
       }
 
-      #carrito {
+  #carrito {
         width: 90%;
         right: 5%;
         bottom: 10px;
       }
     }
 
-    @media (max-width: 600px) {
+  @media (max-width: 600px) {
       header h1 {
         font-size: 1.5rem;
       }
 
-      header p {
+   header p {
         font-size: 0.9rem;
       }
 
-      .producto h3 {
+  .producto h3 {
         font-size: 1rem;
       }
 
-      nav {
+   nav {
         flex-direction: column;
       }
 
-      nav a {
+  nav a {
         width: 100%;
         text-align: center;
         border-top: 1px solid rgba(255,255,255,0.2);
       }
 
-      #carrito {
+   #carrito {
         width: 95%;
         right: 2.5%;
         bottom: 5px;
         font-size: 0.9rem;
       }
 
-      table {
+   table {
         font-size: 0.85rem;
       }
 
-      .boton {
+   .boton {
         padding: 8px 10px;
       }
     }
@@ -284,7 +282,7 @@
     <h2>Nuestros Productos</h2>
     <div class="productos">
       <div class="producto">
-        <img src="https://pypaprint.com/files/subscribers/ea32e0c7-d695-4cbd-a1ed-b568857a315a/sites/b80c0000-568f-0050-8e4b-08db7dfaf500/products/880c0000-568f-0050-a12d-08db812bad45/Tarjetas_ECOLOGICA_xlarge.png?stamp=638306294511718061" alt="Tarjetas sembrables con semillas">
+        <img src="tarjeta.jpg" alt="Tarjetas sembrables con semillas">
         <h3>Tarjetas Sembrables</h3>
         <p>$1.200</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -294,8 +292,8 @@
         <button class="boton" onclick="agregarCarrito('Tarjetas Sembrables', 1200)">Agregar al carrito</button>
       </div>
 
-      <div class="producto">
-        <img src="https://eco-regalos.com/movil/wp-content/uploads/2021/04/etiquetas_germinables_eco_semillas-ropa-01-scaled.jpg">
+  <div class="producto">
+        <img src="etiqueta.jpg">
         <h3>Etiquetas Sembrables</h3>
         <p>$1.000</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -305,8 +303,8 @@
         <button class="boton" onclick="agregarCarrito('Etiquetas Sembrables', 1000)">Agregar al carrito</button>
       </div>
 
-      <div class="producto">
-        <img src="https://merchperu.net/wp-content/uploads/2022/09/LIBRETA-ECOLOGICA-RKN-820-2.jpg" alt="Cuadernos ecológicos">
+   <div class="producto">
+        <img src="cuaderno.jpg" alt="Cuadernos ecológicos">
         <h3>Cuadernos Ecológicos</h3>
         <p>$3.500</p>
         <button class="boton" onclick="toggleDetalles(this)">Más detalles</button>
@@ -386,5 +384,3 @@
   </script>
 </body>
 </html>
-
-
